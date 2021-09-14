@@ -13,7 +13,7 @@ import java.util.Stack;
 public class StackTest 
 {
     @Test
-    public void stackTest()
+    public void basicStackTest()
     {
         Stack<Integer> stack = new Stack<Integer>();
         stack.push(1);
@@ -30,6 +30,21 @@ public class StackTest
         
         assertTrue(stack.isEmpty());
         
+    }
+
+    @Test
+    public void iteratorStackTest() {
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        // LIFO
+        Integer expected = 3;
+        for (Integer actual : stack) {
+            assertEquals(expected, actual);  
+            actual --;
+        }
     }
 
 
