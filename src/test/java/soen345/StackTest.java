@@ -5,7 +5,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import java.util.Iterator;
 import java.util.Stack;
+import java.util.Vector;
 
 /**
  * Unit test for simple App.
@@ -39,7 +41,6 @@ public class StackTest
         stack.push(2);
         stack.push(3);
 
-        // LIFO
         Integer expected = 1;
         for (Integer actual : stack) {
             assertEquals(expected, actual);  
@@ -47,6 +48,11 @@ public class StackTest
         }
 
         assertTrue(!stack.isEmpty());
+
+        //FIFO
+        Vector<Integer> v = new Vector<Integer>();
+
+        assertEquals(v.iterator().getClass(), stack.iterator().getClass());
     }
 
     
