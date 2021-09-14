@@ -40,12 +40,16 @@ public class StackTest
         stack.push(3);
 
         // LIFO
-        Integer expected = 3;
+        Integer expected = 1;
         for (Integer actual : stack) {
             assertEquals(expected, actual);  
-            actual --;
+            expected ++;
         }
+
+        assertTrue(!stack.isEmpty());
     }
+
+    
 
 
 }
