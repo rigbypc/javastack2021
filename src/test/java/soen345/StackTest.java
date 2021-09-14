@@ -5,8 +5,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import java.util.Iterator;
-import java.util.Stack;
 import java.util.Vector;
 
 /**
@@ -17,7 +15,7 @@ public class StackTest
     @Test
     public void basicStackTest()
     {
-        Stack<Integer> stack = new Stack<Integer>();
+        StackProper<Integer> stack = new StackProper<Integer>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -36,7 +34,7 @@ public class StackTest
 
     @Test
     public void iteratorStackTest() {
-        Stack<Integer> stack = new Stack<Integer>();
+        StackProper<Integer> stack = new StackProper<Integer>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
